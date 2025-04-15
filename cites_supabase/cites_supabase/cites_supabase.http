@@ -1,0 +1,6 @@
+@cites_supabase_HostAddress = http://localhost:5007
+
+GET {{cites_supabase_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
