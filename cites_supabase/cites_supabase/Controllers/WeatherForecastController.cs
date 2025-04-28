@@ -67,12 +67,12 @@ namespace WebApplication1.Controllers
             }
         }
 
-/*        [HttpPut("UpdateUser", Name = "UpdateUser")]
-        public async Task<ActionResult> UpdateUser([FromBody] UserName userName)
+        [HttpPut("UpdateUser", Name = "UpdateUser")]
+        public async Task<ActionResult> UpdateUser([FromBody] CitesUpdate userName)
         {
             try
             {
-                bool update = await _supabaseContext.UpdateUser(_supabaseClient, userName);
+                bool update = await _supabaseContext.UpdateCites(_supabaseClient, userName);
                 if (update == true)
                 {
                     return Ok("Обновление прошло успешно");
@@ -89,11 +89,11 @@ namespace WebApplication1.Controllers
         }
 
         [HttpDelete("DeleteUser", Name = "DeleteUser")]
-        public async Task<ActionResult> DeleteUser([FromBody] UserDelete userDelete)
+        public async Task<ActionResult> DeleteUser([FromBody] CitesDelete userDelete)
         {
             try
             {
-                bool update = await _supabaseContext.DeleteUsers(_supabaseClient, userDelete);
+                bool update = await _supabaseContext.DeleteCites(_supabaseClient, userDelete);
                 if (update == true)
                 {
                     return Ok("Удаление прошло успешно");
@@ -107,11 +107,25 @@ namespace WebApplication1.Controllers
             {
                 return BadRequest("Неизвестная ошибка");
             }
-        }*/
+        }
 
         public class CitesData
         {
             public string Title { get; set; }
         }
+    }
+
+    public class CitesDelete
+    {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+    }
+
+    public class CitesUpdate
+    {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
     }
 }

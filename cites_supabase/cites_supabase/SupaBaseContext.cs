@@ -33,7 +33,7 @@ namespace WebApplication1
                 return false;
             }
         }
-/*        public async Task<bool> UpdateCites(Supabase.Client _supabaseClient, TitleCites newTitle)
+        public async Task<bool> UpdateCites(Supabase.Client _supabaseClient, CitesUpdate newTitle)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace WebApplication1
             }
         }
 
-        public async Task<bool> DeleteCites(Client _supabaseClient, DeleteCite DeleteCite)
+        public async Task<bool> DeleteCites(Supabase.Client _supabaseClient, CitesDelete DeleteCite)
         {
             try
             {
@@ -57,6 +57,6 @@ namespace WebApplication1
             {
                 return false;
             }
-        }*/
+        }
     }
 }

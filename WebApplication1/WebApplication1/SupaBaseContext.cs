@@ -54,6 +54,7 @@ namespace WebApplication1
                 user.Age = userDates.Age;
                 user.Login = userDates.Login;
                 user.Password = userDates.Password;
+                user.CityId = userDates.CityId;
 
                 await user.Update<User>();
                 return true;

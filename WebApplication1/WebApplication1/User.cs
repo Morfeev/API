@@ -17,5 +17,7 @@ namespace WebApplication1
         public string Login { get; set; }
         [Column("password")]
         public string Password { get; set; }
+        [Column("city_id")]
+        public int? CityId { get; set; }
     }
 }

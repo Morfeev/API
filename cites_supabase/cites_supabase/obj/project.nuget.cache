@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vzq/oH3ZZqTgWFYU4k2u0HhqauUA89gi5xdRYeII5k3q01soL/oe/btfvnALPlpXlcTjNEwylASs2I/PXkXaUw==",
+  "dgSpecHash": "RQ/ul/F5BUDCxc2FRtAF241pK4QGzMm3fjZNVa4KvmyU0ZUzu5o5QMxUQCKdY0dl8h3TVxsGgQ6Du7Lty4ufdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\IS\\Desktop\\програм\\cites_supabase\\cites_supabase\\cites_supabase.csproj",
+  "projectFilePath": "C:\\Users\\IS\\Desktop\\API-main\\cites_supabase\\cites_supabase\\cites_supabase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IS\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\IS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",

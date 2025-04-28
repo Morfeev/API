@@ -157,6 +157,8 @@ namespace WebApplication1.Controllers
         public string Login { get; set; }
         [JsonProperty("password")]
         public string Password { get; set; }
+        [JsonProperty("city_id")]
+        public int? CityId { get; set; }
     }
 
     public class UserName

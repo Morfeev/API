@@ -1,6 +1,23 @@
 [
   {
     "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
+    "Method": "DeleteUser",
+    "RelativePath": "WeatherForecast/DeleteUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDelete",
+        "Type": "WebApplication1.Controllers.UserDelete",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "DeleteUser"
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
     "Method": "GetAllUsers",
     "RelativePath": "WeatherForecast/GetAllUsers",
     "HttpMethod": "GET",
@@ -30,11 +47,45 @@
     "Parameters": [
       {
         "Name": "userData",
-        "Type": "WebApplication1.UserData",
+        "Type": "WebApplication1.Controllers.WeatherForecastController\u002BUserData",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [],
     "EndpointName": "InsertUser"
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
+    "Method": "UpdateUser",
+    "RelativePath": "WeatherForecast/UpdateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "WebApplication1.Controllers.UserName",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "UpdateUser"
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
+    "Method": "UpdateUserAll",
+    "RelativePath": "WeatherForecast/UpdateUserAll",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDates",
+        "Type": "WebApplication1.Controllers.UserDates",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "UpdateUserAll"
   }
 ]
