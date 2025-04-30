@@ -14,18 +14,18 @@ namespace WebApplication1
         {
         }
 
-        public async Task<List<Cites>> GetCites(Supabase.Client _supabaseClient)
+        public async Task<List<City>> GetCities(Supabase.Client _supabaseClient)
         {
-            var result = await _supabaseClient.From<Cites>().Get();
+            var result = await _supabaseClient.From<City>().Get();
             return result.Models;
         }
 
-        public async Task<bool> InserCites(Supabase.Client _supabaseClient, Cites newCite)
+        public async Task<bool> InserCities(Supabase.Client _supabaseClient, City newCity)
         {
 
             try
             {
-                await _supabaseClient.From<Cites>().Insert(newCite);
+                await _supabaseClient.From<City>().Insert(newCity);
                 return true;
             }
             catch (Exception ex)
@@ -33,11 +33,11 @@ namespace WebApplication1
                 return false;
             }
         }
-        public async Task<bool> UpdateCites(Supabase.Client _supabaseClient, CitesUpdate newTitle)
+        public async Task<bool> UpdateCities(Supabase.Client _supabaseClient, CitiesUpdate newTitle)
         {
             try
             {
-                await _supabaseClient.From<Cites>().Where(x => x.Id == newTitle.Id).Set(x => x.Title, newTitle.Title).Update();
+                await _supabaseClient.From<City>().Where(x => x.Id == newTitle.Id).Set(x => x.Title, newTitle.Title).Update();
                 return true;
             }
             catch (Exception ex)
@@ -46,11 +46,28 @@ namespace WebApplication1
             }
         }
 
-        public async Task<bool> DeleteCites(Supabase.Client _supabaseClient, CitesDelete DeleteCite)
+        public async Task<bool> UpdateCitiesAll(Supabase.Client _supabaseClient, CitiesUpdateAll UpdateAll)
         {
             try
             {
-                await _supabaseClient.From<Cites>().Where(x => x.Id == DeleteCite.Id).Delete();
+                var city = await _supabaseClient.From<City>().Where(x => x.Id == UpdateAll.Id).Single();
+                city.Title = UpdateAll.Title;
+                city.Population = UpdateAll.Population;
+
+                await city.Update<City>();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteCities(Supabase.Client _supabaseClient, CitiesDelete DeleteCity)
+        {
+            try
+            {
+                await _supabaseClient.From<City>().Where(x => x.Id == DeleteCity.Id).Delete();
                 return true;
             }
             catch (Exception ex)

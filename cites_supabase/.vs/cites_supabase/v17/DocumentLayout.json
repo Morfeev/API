@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88669AC5-C1FB-4C09-A96D-623616B918C1}|cites_supabase\\cites_supabase.csproj|c:\\users\\\u043C\u043E\u0440\u0444\u0435\u0435\u0432\\desktop\\api-main\\api\\cites_supabase\\cites_supabase\\cites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88669AC5-C1FB-4C09-A96D-623616B918C1}|cites_supabase\\cites_supabase.csproj|solutionrelative:cites_supabase\\cites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88669AC5-C1FB-4C09-A96D-623616B918C1}|cites_supabase\\cites_supabase.csproj|c:\\users\\\u043C\u043E\u0440\u0444\u0435\u0435\u0432\\desktop\\api-main\\api\\cites_supabase\\cites_supabase\\supabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88669AC5-C1FB-4C09-A96D-623616B918C1}|cites_supabase\\cites_supabase.csproj|solutionrelative:cites_supabase\\supabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88669AC5-C1FB-4C09-A96D-623616B918C1}|cites_supabase\\cites_supabase.csproj|c:\\users\\\u043C\u043E\u0440\u0444\u0435\u0435\u0432\\desktop\\api-main\\api\\cites_supabase\\cites_supabase\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88669AC5-C1FB-4C09-A96D-623616B918C1}|cites_supabase\\cites_supabase.csproj|solutionrelative:cites_supabase\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cites.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\cites_supabase\\Cites.cs",
+              "RelativeDocumentMoniker": "cites_supabase\\Cites.cs",
+              "ToolTip": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\cites_supabase\\Cites.cs",
+              "RelativeToolTip": "cites_supabase\\Cites.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:02:33.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\cites_supabase\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "cites_supabase\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\cites_supabase\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "cites_supabase\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAgwJkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:02:33.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SupaBaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\cites_supabase\\SupaBaseContext.cs",
+              "RelativeDocumentMoniker": "cites_supabase\\SupaBaseContext.cs",
+              "ToolTip": "C:\\Users\\\u041C\u043E\u0440\u0444\u0435\u0435\u0432\\Desktop\\API-main\\API\\cites_supabase\\cites_supabase\\SupaBaseContext.cs",
+              "RelativeToolTip": "cites_supabase\\SupaBaseContext.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAewCoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:02:33.81Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

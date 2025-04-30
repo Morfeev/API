@@ -21,12 +21,12 @@ namespace WebApplication1.Controllers
             _supabaseContext = supabaseContext;
         }
 
-        [HttpGet("GetAllUsers", Name = "GetAllUsers")]
-        public async Task<string> GetAllUsers()
+        [HttpGet("GetAllCity", Name = "GetAllCity")]
+        public async Task<string> GetAllCity()
         {
             try
             {
-                var result = await _supabaseContext.GetCites(_supabaseClient);
+                var result = await _supabaseContext.GetCities(_supabaseClient);
                 return JsonConvert.SerializeObject(result, Formatting.Indented);
             }
             catch (Exception ex)
@@ -35,22 +35,22 @@ namespace WebApplication1.Controllers
             }
         }
 
-        [HttpPost("InsertUser", Name = "InsertUser")]
-        public async Task<ActionResult> InsertUser([FromBody] CitesData CiteData)
+        [HttpPost("InsertCity", Name = "InsertCity")]
+        public async Task<ActionResult> InsertCity([FromBody] CitiesData CityData)
         {
             try
             {
-                if (string.IsNullOrEmpty(CiteData.Title))
+                if (string.IsNullOrEmpty(CityData.Title))
                 {
                     return BadRequest("Пустое название");
                 }
                 else
                 {
-                    Cites newCite = new Cites
+                    City newCity = new City
                     {
-                        Title = CiteData.Title
+                        Title = CityData.Title
                     };
-                    bool result = await _supabaseContext.InserCites(_supabaseClient, newCite);
+                    bool result = await _supabaseContext.InserCities(_supabaseClient, newCity);
                     if (result == true)
                     {
                         return Ok("Добавление прошло успешно");
@@ -67,12 +67,12 @@ namespace WebApplication1.Controllers
             }
         }
 
-        [HttpPut("UpdateUser", Name = "UpdateUser")]
-        public async Task<ActionResult> UpdateUser([FromBody] CitesUpdate userName)
+        [HttpPut("UpdateCity", Name = "UpdateCity")]
+        public async Task<ActionResult> UpdateCity([FromBody] CitiesUpdate cityTitle)
         {
             try
             {
-                bool update = await _supabaseContext.UpdateCites(_supabaseClient, userName);
+                bool update = await _supabaseContext.UpdateCities(_supabaseClient, cityTitle);
                 if (update == true)
                 {
                     return Ok("Обновление прошло успешно");
@@ -88,12 +88,33 @@ namespace WebApplication1.Controllers
             }
         }
 
-        [HttpDelete("DeleteUser", Name = "DeleteUser")]
-        public async Task<ActionResult> DeleteUser([FromBody] CitesDelete userDelete)
+        [HttpPut("UpdateCityAll", Name = "UpdateCityAll")]
+        public async Task<ActionResult> UpdateCityAll([FromBody] CitiesUpdateAll UpdateAll)
         {
             try
             {
-                bool update = await _supabaseContext.DeleteCites(_supabaseClient, userDelete);
+                bool update = await _supabaseContext.UpdateCitiesAll(_supabaseClient, UpdateAll);
+                if (update == true)
+                {
+                    return Ok("Обновление прошло успешно");
+                }
+                else
+                {
+                    return BadRequest("Не удалось добавить пользователя в БД");
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Неизвестная ошибка");
+            }
+        }
+
+        [HttpDelete("DeleteCity", Name = "DeleteCity")]
+        public async Task<ActionResult> DeleteCity([FromBody] CitiesDelete cityDelete)
+        {
+            try
+            {
+                bool update = await _supabaseContext.DeleteCities(_supabaseClient, cityDelete);
                 if (update == true)
                 {
                     return Ok("Удаление прошло успешно");
@@ -109,23 +130,33 @@ namespace WebApplication1.Controllers
             }
         }
 
-        public class CitesData
+        public class CitiesData
         {
             public string Title { get; set; }
         }
     }
 
-    public class CitesDelete
+    public class CitiesDelete
     {
         [JsonProperty("id")]
         public int Id { get; set; }
     }
 
-    public class CitesUpdate
+    public class CitiesUpdate
     {
         [JsonProperty("id")]
         public int Id { get; set; }
         [JsonProperty("title")]
         public string Title { get; set; }
+    }
+
+    public class CitiesUpdateAll
+    {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
+        [JsonProperty("population")]
+        public int Population { get; set; }
     }
 }

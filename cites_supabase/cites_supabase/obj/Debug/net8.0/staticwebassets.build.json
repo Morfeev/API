@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "d14OPhe0iUjA1ObGx0aOg4Vimd7aOTVPB84alOYvgfI=",
+  "Hash": "1rOhXRKdSioUHW7MoE0NPC2gkEMHLtaIw4U+pa8CWm0=",
   "Source": "cites_supabase",
   "BasePath": "_content/cites_supabase",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

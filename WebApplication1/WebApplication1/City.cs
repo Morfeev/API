@@ -3,13 +3,14 @@ using Supabase.Postgrest.Attributes;
 
 namespace WebApplication1
 {
-    [Table("cities")]
+    [Table("city")]
     public class City : BaseModel
     {
         [PrimaryKey("id")]
         public int Id { get; set; }
-
-        [Column("name")]
-        public string Name { get; set; }
+        [Column("title")]
+        public string Title { get; set; }
+        [Column("population")]
+        public int Population { get; set; }
     }
 }
